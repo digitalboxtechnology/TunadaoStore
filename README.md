@@ -1,4 +1,4 @@
-![Texto alternativo]([nome_da_imagem.png](https://i.ibb.co/rRLP2FMT/Whats-App-Image-2025-09-25-at-12-27-19.jpg))
+![Texto alternativo](https://i.ibb.co/rRLP2FMT/Whats-App-Image-2025-09-25-at-12-27-19.jpg)
 
 # TunadãoStore �
 
