@@ -131,17 +131,6 @@ Este projeto demonstra:
 - Desenvolvimento orientado a componentes
 - Gerenciamento de estado no frontend
 
-## 🎯 Público Alvo
-
-Este projeto é ideal para desenvolvedores que:
-
-- Já possuem conhecimentos básicos em ASP.NET Core e Angular
-- Querem aprender a construir aplicações completas do zero
-- Desejam entender padrões de arquitetura na prática
-- Buscam experiência hands-on (90%+ do conteúdo é prático)
-
-**Nota Importante**: Se você nunca programou antes, recomenda-se começar com cursos básicos de .NET Core e Angular antes de abordar este projeto.
-
 ## 🤝 Contribuindo
 
 Contribuições são bem-vindas! Sinta-se à vontade para:
