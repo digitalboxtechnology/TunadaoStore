@@ -1,4 +1,7 @@
-![Texto alternativo](https://i.ibb.co/rRLP2FMT/Whats-App-Image-2025-09-25-at-12-27-19.jpg)
+<p align="center">
+  <img src="https://i.ibb.co/rRLP2FMT/Whats-App-Image-2025-09-25-at-12-27-19.jpg" alt="TunadãoStore" width="400"/>
+</p>
+
 
 # TunadãoStore �
 
