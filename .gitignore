@@ -1,0 +1,49 @@
+# Build Folders
+bin/
+obj/
+
+# Visual Studio / Rider / VSCode
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vscode/
+
+# Rider
+.idea/
+
+# NuGet Packages
+*.nupkg
+packages/
+*.snupkg
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# ASP.NET Core
+wwwroot/lib/
+
+# Resharper
+_ReSharper*/
+
+# Temporary files
+*.tmp
+*.cache
+*.bak
+
+# Assembly / build artifacts
+*.dll
+*.exe
+*.pdb
+*.mdb
+
+# JetBrains Rider
+*.DotSettings.user
+
+# Test results
+TestResult
