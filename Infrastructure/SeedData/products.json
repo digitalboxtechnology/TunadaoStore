@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Teclado Mecânico Redragon Kumara",
+    "description": "Teclado mecânico Redragon Kumara, switches Outemu Blue, retroiluminação RGB",
+    "price": 299.90,
+    "pictureUrl": "https://example.com/images/redragon-kumara.jpg",
+    "type": "Teclado",
+    "brand": "Redragon",
+    "quantityInStock": 30
+  },
+  {
+    "name": "Mouse Gamer Logitech G502",
+    "description": "Mouse Gamer Logitech G502 HERO, 16.000 DPI, RGB personalizável",
+    "price": 249.90,
+    "pictureUrl": "https://example.com/images/logitech-g502.jpg",
+    "type": "Mouse",
+    "brand": "Logitech",
+    "quantityInStock": 45
+  },
+  {
+    "name": "Fonte Corsair RM750x 750W",
+    "description": "Fonte Corsair RM750x, 750W, 80 Plus Gold, modular",
+    "price": 899.90,
+    "pictureUrl": "https://example.com/images/corsair-rm750x.jpg",
+    "type": "Fonte",
+    "brand": "Corsair",
+    "quantityInStock": 20
+  },
+  {
+    "name": "Placa-mãe ASUS ROG Strix B550-F",
+    "description": "Placa-mãe ASUS ROG Strix B550-F Gaming, AM4, suporte PCIe 4.0, DDR4",
+    "price": 1299.00,
+    "pictureUrl": "https://example.com/images/asus-rog-b550f.jpg",
+    "type": "Placa-mãe",
+    "brand": "ASUS",
+    "quantityInStock": 12
+  },
+  {
+    "name": "Cooler CPU Cooler Master Hyper 212",
+    "description": "Cooler para processador Cooler Master Hyper 212 Black Edition, compatível Intel/AMD",
+    "price": 249.90,
+    "pictureUrl": "https://example.com/images/coolermaster-hyper212.jpg",
+    "type": "Cooler",
+    "brand": "Cooler Master",
+    "quantityInStock": 35
+  },
+  {
+    "name": "SSD Samsung 970 EVO Plus 500GB",
+    "description": "SSD Samsung 970 EVO Plus, 500GB, NVMe PCIe M.2, velocidade de leitura 3500MB/s",
+    "price": 649.90,
+    "pictureUrl": "https://example.com/images/samsung-970-evo-500gb.jpg",
+    "type": "SSD",
+    "brand": "Samsung",
+    "quantityInStock": 50
+  },
+  {
+    "name": "Monitor LG 24MK430H 24”",
+    "description": "Monitor LG 24MK430H, IPS, Full HD, 75Hz, FreeSync",
+    "price": 799.00,
+    "pictureUrl": "https://example.com/images/lg-24mk430h.jpg",
+    "type": "Monitor",
+    "brand": "LG",
+    "quantityInStock": 22
+  },
+  {
+    "name": "Memória RAM HyperX Fury 8GB",
+    "description": "Memória RAM DDR4 HyperX Fury, 8GB, 2666MHz, plug and play",
+    "price": 219.90,
+    "pictureUrl": "https://example.com/images/hyperx-fury-8gb.jpg",
+    "type": "Memória RAM",
+    "brand": "HyperX",
+    "quantityInStock": 40
+  },
+  {
+    "name": "Gabinete Thermaltake V200 RGB",
+    "description": "Gabinete Thermaltake V200, Mid Tower, vidro temperado, RGB",
+    "price": 499.90,
+    "pictureUrl": "https://example.com/images/thermaltake-v200.jpg",
+    "type": "Gabinete",
+    "brand": "Thermaltake",
+    "quantityInStock": 15
+  },
+  {
+    "name": "Headset HyperX Cloud II",
+    "description": "Headset HyperX Cloud II, som surround 7.1, microfone removível, compatível PC e consoles",
+    "price": 399.90,
+    "pictureUrl": "https://example.com/images/hyperx-cloud-ii.jpg",
+    "type": "Headset",
+    "brand": "HyperX",
+    "quantityInStock": 28
+  }
+]
