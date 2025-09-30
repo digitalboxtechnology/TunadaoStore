@@ -29,7 +29,7 @@ public class ProductRepository : IProductRepository
             .ToListAsync();
     }
 
-    public async Task<IReadOnlyList<Product>> GetAllProductsAsync(string? brand, string? type)
+    public async Task<IReadOnlyList<Product>> GetAllProductsAsync(string? brand, string? type, string? sort)
     {
         var query = _context.Products.AsQueryable();
 
@@ -42,6 +42,13 @@ public class ProductRepository : IProductRepository
         {
             query = query.Where(p => p.Type == type);
         }
+
+        query = sort switch
+        {
+            "priceAsc" => query.OrderBy(p => p.Price),
+            "priceDesc" => query.OrderByDescending(p => p.Price),
+             _ => query.OrderBy(p => p.Name)
+        };
 
         return await query.ToListAsync();
     }
