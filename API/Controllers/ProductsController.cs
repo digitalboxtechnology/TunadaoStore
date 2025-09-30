@@ -45,7 +45,7 @@ public class ProductsController : ControllerBase
     [HttpPut("{id:int}")]
     public async Task<IActionResult> UpdateProduct(int id, Product product)
     {
-        if (id != product.Id) return BadRequest("Cannot update product");
+        if (id != product.Id || !ProductExists(id)) return BadRequest("Cannot update product");
 
         _productRepository.UpdateProduct(product);
 
@@ -67,6 +67,20 @@ public class ProductsController : ControllerBase
             return NoContent();
 
         return BadRequest("Problem deleting product");
+    }
+
+    [HttpGet("brands")]
+    public async Task<ActionResult<IReadOnlyList<string>>> GetProductBrands()
+    {
+        var brands = await _productRepository.GetAllProductBrandsAsync();
+        return Ok(brands);
+    }
+
+    [HttpGet("types")]
+    public async Task<ActionResult<IReadOnlyList<string>>> GetProductTypes()
+    {
+        var types = await _productRepository.GetAllProductTypesAsync();
+        return Ok(types);
     }
 
     private bool ProductExists(int id)
