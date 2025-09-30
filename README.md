@@ -123,18 +123,6 @@ O projeto implementa diversos padrões e práticas recomendadas:
    - Frontend: `http://localhost:4200`
    - Backend API: `http://localhost:5000`
 
-## 📚 Aprendizados
-
-Este projeto demonstra:
-
-- Criação de aplicações multi-projeto com .NET Core
-- Desenvolvimento de SPAs com Angular
-- Implementação de autenticação e autorização
-- Integração com APIs de pagamento
-- Deploy em cloud (Azure)
-- Padrões de arquitetura para aplicações enterprise
-- Desenvolvimento orientado a componentes
-- Gerenciamento de estado no frontend
 
 ## 🤝 Contribuindo
 
