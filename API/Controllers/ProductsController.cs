@@ -18,9 +18,9 @@ public class ProductsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts()
+    public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts(string? brand, string? type)
     {
-        return Ok(await _productRepository.GetAllProductsAsync());
+        return Ok(await _productRepository.GetAllProductsAsync(brand, type));
     }
 
     [HttpGet("{id:int}")] //api/products/3
