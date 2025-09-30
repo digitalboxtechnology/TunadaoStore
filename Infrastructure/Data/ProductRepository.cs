@@ -29,9 +29,21 @@ public class ProductRepository : IProductRepository
             .ToListAsync();
     }
 
-    public async Task<IReadOnlyList<Product>> GetAllProductsAsync()
+    public async Task<IReadOnlyList<Product>> GetAllProductsAsync(string? brand, string? type)
     {
-        return await _context.Products.ToListAsync();
+        var query = _context.Products.AsQueryable();
+
+        if(!string.IsNullOrEmpty(brand))
+        {
+            query = query.Where(p => p.Brand == brand);
+        }
+
+        if(!string.IsNullOrEmpty(type))
+        {
+            query = query.Where(p => p.Type == type);
+        }
+
+        return await query.ToListAsync();
     }
 
     public async Task<IReadOnlyList<string>> GetAllProductTypesAsync()
