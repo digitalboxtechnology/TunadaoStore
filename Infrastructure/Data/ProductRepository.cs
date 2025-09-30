@@ -21,9 +21,25 @@ public class ProductRepository : IProductRepository
         _context.Products.Remove(product);
     }
 
+    public async Task<IReadOnlyList<string>> GetAllProductBrandsAsync()
+    {
+        return await _context.Products
+            .Select(p => p.Brand)
+            .Distinct()
+            .ToListAsync();
+    }
+
     public async Task<IReadOnlyList<Product>> GetAllProductsAsync()
     {
         return await _context.Products.ToListAsync();
+    }
+
+    public async Task<IReadOnlyList<string>> GetAllProductTypesAsync()
+    {
+        return await _context.Products
+            .Select(p => p.Type)
+            .Distinct()
+            .ToListAsync();
     }
 
     public async Task<Product?> GetProductByIdAsync(int id)
