@@ -22,7 +22,7 @@ public class ProductsController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts(string? brand, string? type, [FromQuery] string? sort)
     {
-        var spec = new ProductFilterSpecification(brand, type);
+        var spec = new ProductFilterSpecification(brand, type, sort);
 
         var products = await _productRepository.ListAsync(spec);
 
