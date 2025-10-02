@@ -12,6 +12,16 @@ public class SpecificationEvaluator<T> where T : BaseEntity
             inputQuery = inputQuery.Where(spec.Criteria); // x=> x.Brand == brand
         }
 
+        if (spec.OrderBy != null)
+        {
+            inputQuery = inputQuery.OrderBy(spec.OrderBy);
+        }
+
+        if (spec.OrderByDescending != null)
+        {
+            inputQuery = inputQuery.OrderByDescending(spec.OrderByDescending);
+        }
+
         return inputQuery;
     }
 }
