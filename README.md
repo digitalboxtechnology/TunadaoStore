@@ -9,7 +9,7 @@ Uma aplicação de e-commerce completa desenvolvida com **ASP.NET Core** e **Ang
 
 ## 📋 Sobre o Projeto
 
-A TunadãoStore é um projeto educacional que implementa uma loja virtual completa, desde o backend até o frontend, utilizando tecnologias modernas e padrões de arquitetura consolidados no mercado.
+A TunadãoStore é um projeto que implementa uma loja virtual completa, desde o backend até o frontend, utilizando tecnologias modernas e padrões de arquitetura consolidados no mercado.
 
 ## 🚀 Tecnologias Utilizadas
 
