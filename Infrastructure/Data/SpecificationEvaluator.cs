@@ -23,6 +23,11 @@ public class SpecificationEvaluator<T> where T : BaseEntity
             inputQuery = inputQuery.OrderByDescending(spec.OrderByDescending);
         }
 
+        if (spec.IsDistinct)
+        {
+            inputQuery = inputQuery.Distinct();
+        }
+
         return inputQuery;
     }
 
@@ -48,6 +53,11 @@ public class SpecificationEvaluator<T> where T : BaseEntity
         if(selectQuery == null && spec.Select != null)
         {
             selectQuery = inputQuery.Select(spec.Select);
+        }
+
+        if(spec.IsDistinct)
+        {
+            selectQuery = selectQuery?.Distinct();
         }
 
         return selectQuery ?? inputQuery.Cast<TResult>();
