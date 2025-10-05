@@ -1,3 +1,4 @@
+using System.Reflection.Metadata;
 using Core;
 using Core.Entities;
 using Core.Interfaces;
@@ -78,18 +79,15 @@ public class ProductsController : ControllerBase
     [HttpGet("brands")]
     public async Task<ActionResult<IReadOnlyList<string>>> GetProductBrands()
     {
-        //TODO: Implements method
-        //var brands = await _productRepository.GetAllProductBrandsAsync();
-        
-        return Ok();
+        var spec = new BrandListSpecification();
+        return Ok(await _productRepository.ListAsync(spec));
     }
 
     [HttpGet("types")]
     public async Task<ActionResult<IReadOnlyList<string>>> GetProductTypes()
     {
-        //TODO: Implements method
-        //var types = await _productRepository.GetAllProductTypesAsync();
-        return Ok();
+        var spec = new TypeListSpecification();
+        return Ok(await _productRepository.ListAsync(spec));
     }
 
     private bool ProductExists(int id)
