@@ -4,11 +4,11 @@ namespace Core.Specifications;
 
 public class ProductFilterSpecification : BaseSpecification<Product>
 {
-    public ProductFilterSpecification(string? brand, string? type, string? sort) : base(x =>
-        (string.IsNullOrEmpty(brand) || x.Brand == brand) &&
-        (string.IsNullOrEmpty(type) || x.Type == type))
+    public ProductFilterSpecification(ProductSpecParams productSpecParams) : base(x =>
+        (!productSpecParams.Brands.Any() || productSpecParams.Brands.Contains(x.Brand)) &&
+        (!productSpecParams.Types.Any() || productSpecParams.Types.Contains(x.Type)))
     {
-        switch (sort)
+        switch (productSpecParams.Sort)
         {
             case "priceAsc":
                 AddOrderBy(p => p.Price);
