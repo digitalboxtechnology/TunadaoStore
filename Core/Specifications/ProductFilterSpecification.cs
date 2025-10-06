@@ -8,6 +8,9 @@ public class ProductFilterSpecification : BaseSpecification<Product>
         (!productSpecParams.Brands.Any() || productSpecParams.Brands.Contains(x.Brand)) &&
         (!productSpecParams.Types.Any() || productSpecParams.Types.Contains(x.Type)))
     {
+
+        ApplyPaging(productSpecParams.PageSize * (productSpecParams.PageIndex - 1), productSpecParams.PageSize);
+
         switch (productSpecParams.Sort)
         {
             case "priceAsc":
