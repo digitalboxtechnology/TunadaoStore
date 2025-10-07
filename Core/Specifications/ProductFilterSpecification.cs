@@ -5,6 +5,7 @@ namespace Core.Specifications;
 public class ProductFilterSpecification : BaseSpecification<Product>
 {
     public ProductFilterSpecification(ProductSpecParams productSpecParams) : base(x =>
+        (string.IsNullOrEmpty(productSpecParams.Search) || x.Name.ToLower().Contains(productSpecParams.Search)) &&
         (!productSpecParams.Brands.Any() || productSpecParams.Brands.Contains(x.Brand)) &&
         (!productSpecParams.Types.Any() || productSpecParams.Types.Contains(x.Type)))
     {
