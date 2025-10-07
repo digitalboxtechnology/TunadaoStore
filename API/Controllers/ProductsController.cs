@@ -1,4 +1,5 @@
 using System.Reflection.Metadata;
+using API.RequestHelpers;
 using Core;
 using Core.Entities;
 using Core.Interfaces;
@@ -27,7 +28,11 @@ public class ProductsController : ControllerBase
 
         var products = await _productRepository.ListAsync(spec);
 
-        return Ok(products);
+        var count = await _productRepository.CountAsync(spec);
+
+        var pagination = new Pagination<Product>(productSpecParams.PageIndex, productSpecParams.PageSize, count, products); 
+
+        return Ok(pagination);
     }
 
     [HttpGet("{id:int}")] //api/products/3
