@@ -10,9 +10,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers;
 
-[ApiController]
-[Route("api/[controller]")]
-public class ProductsController : ControllerBase
+
+public class ProductsController : BaseController
 {
     private readonly IGenericRepository<Product> _productRepository;
 
@@ -26,13 +25,7 @@ public class ProductsController : ControllerBase
     {
         var spec = new ProductFilterSpecification(productSpecParams);
 
-        var products = await _productRepository.ListAsync(spec);
-
-        var count = await _productRepository.CountAsync(spec);
-
-        var pagination = new Pagination<Product>(productSpecParams.PageIndex, productSpecParams.PageSize, count, products); 
-
-        return Ok(pagination);
+        return await CreatePagedResult(_productRepository, spec, productSpecParams.PageIndex, productSpecParams.PageSize);
     }
 
     [HttpGet("{id:int}")] //api/products/3
