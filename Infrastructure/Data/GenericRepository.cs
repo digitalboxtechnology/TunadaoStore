@@ -17,6 +17,13 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
         _context.Set<T>().Add(entity);
     }
 
+    public async Task<int> CountAsync(ISpecification<T> spec)
+    {
+        var query = _context.Set<T>().AsQueryable();
+        query = spec.Apply(query);
+        return await query.CountAsync();
+    }
+
     public void Delete(T entity)
     {
         _context.Set<T>().Remove(entity);
