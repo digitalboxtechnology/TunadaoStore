@@ -1,0 +1,37 @@
+using Core.Entities;
+using Microsoft.AspNetCore.Mvc;
+
+namespace API.Controllers;
+
+public class BuggyController : BaseController
+{
+    [HttpGet("unauthorized")]
+    public IActionResult GetUnauthorized()
+    {
+        return Unauthorized();
+    }
+
+    [HttpGet("notfound")]
+    public IActionResult GetNotFound()
+    {
+        return NotFound();
+    }
+
+    [HttpGet("servererror")]
+    public IActionResult GetServerError()
+    {
+        throw new Exception("This is a server error");
+    }
+
+    [HttpGet("badrequest")]
+    public IActionResult GetBadRequest()
+    {
+        return BadRequest(new ProblemDetails { Title = "This is a bad request" });
+    }
+
+    [HttpPost("validationerror")]
+    public IActionResult GetValidationError(Product product)
+    {
+        return Ok();
+    }
+}
