@@ -1,0 +1,56 @@
+.custom-badge .mat-badge-content {
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.custom-badge .mat-icon {
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
+}
+
+header a {
+  position: relative;
+}
+
+header a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #3b82f6; /* azul material */
+  transition: width 0.3s ease;
+}
+
+header a:hover::after {
+  width: 100%;
+}
+
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-move 5s ease infinite;
+}
+
+
+button[mat-icon-button] mat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
